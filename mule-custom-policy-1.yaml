@@ -1,0 +1,28 @@
+id: custom-policy-test
+name: custom-policy-test
+description: mule-policy description
+category: Custom
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration:
+  - propertyName: checkLogRequest
+    name: checkForLogRequest
+    description: Do you want to log the request
+    optional: true
+    defaultValue: false
+  
+  - propertyName: inputRequest
+    name: inputRequest
+    description: Provide dw expression to log message
+    optional: true
+    type: expression
+    sensitive: false
+    allowMultiple: false
+    dependsOnKey: checkLogRequest
+    dependsOnValue: true
+    
+    
